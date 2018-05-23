@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>{{restaurant.name}}</h1>
+    {% if items == [] %}
+    <p>Currently no items in this menu.</p>
+    {% endif %}
+    {% for item in items %}
+    <div>
+        <br>
+        <p>{{ item.name }}</p>
+        <p>{{ item.price }}</p>
+        <p>{{ item.description }}</p>
+        <p><a href="#">edit</a>
+            <a href="#">delete</a></p>
+    </div>
+    {% endfor %}
+    <br>
+    <a href="#">Create new menu item</a>
+</body>
+</html>

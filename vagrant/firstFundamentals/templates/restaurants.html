@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Restaurants</h1>
+    {% if restaurants != [] %}
+    {% for eachRestaurant in restaurants %}
+    <br>
+    <p>{{eachRestaurant.name}}</p>
+    <p><a href="#">Edit</a> <a href="#">Delete</a></p>
+    {% endfor %}
+    {% else %}
+    <p>There are currently no restaurants saved.</p>
+    {% endif %}
+    <br>
+    <p><a href="">Create New Restaurant</a></p>
+</body>
+</html>
